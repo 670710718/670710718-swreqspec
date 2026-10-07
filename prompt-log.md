@@ -80,3 +80,15 @@
 - test_T01_no_national_id: PASSED
 
 สรุป: โหมดเขียน test สำหรับ AC-BKG-01 สำเร็จ 3 แถวที่พร้อมตรวจได้ผ่าน และ 1 แถวที่รอ Q-03 ยังไม่มี assert ตามเงื่อนไข
+
+---
+
+## 2026-10-07 08:40 คำสั่ง: /verify specs/001-booking/
+
+- โหมด: ตรวจ requirement
+- ผล test: Backend 7 ผ่าน / Frontend 1 ผ่าน, 1 ไม่ผ่าน
+- รายงาน: 
+  - Backend: `cd backend && pytest -v` => 7 passed in 0.82s
+  - Frontend: `cd frontend && npm test -- --run` => 1 passed, 1 failed
+- ข้อค้นพบใหม่: F-001, F-002, F-003, F-004, F-005
+- ผลสรุป: 3 แถวอยู่ในสถานะ "ครบ" (NFR-PERF-01, CON-TECH-01, IF-IDP-01); 8 แถว "ยังไม่ถึง" หรือ "ช่องโหว่"; frontend AC-BKG-03 ยังไม่พร้อมเพราะไม่พบ `src/pages/SlotPicker`
