@@ -49,7 +49,7 @@
 
 ## 2026-10-07 00.00 คำสั่ง: /testcases AC-BKG-01 specs/001-booking/
 
-- โหมด: ใช้ได้ (ไม่มีแถวสถานะ "ใช้ได้" ใน test-cases.md สำหรับ AC นี้)
+- โหมด: ร่าง (ไม่มีแถวสถานะ "ใช้ได้" ใน test-cases.md สำหรับ AC นี้)
 - หน้าที่ตรวจ: AC-BKG-01, spec.md / plan.md / tasks.md / test-cases.md
 - การตรวจ: T-03 สถานะ "เสร็จ" และ T-06 สถานะ "รอ Q-02"; จึงยังไม่เขียนโค้ด test
 - ผลลัพธ์: เพิ่ม 3 แถว draft ใน specs/001-booking/test-cases.md
