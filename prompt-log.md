@@ -57,3 +57,26 @@
   - TC-BKG-01-2: ขอบ
   - TC-BKG-01-3: ทางผิด (ยังไม่ยืนยันตัวตน, spec ไม่ได้บอกผลที่ควรเป็น และค้างคำถาม Q-03)
 - สรุป: แถวทั้งหมดอยู่ในสถานะ "ร่าง" และต้องให้ทีมตรวจแล้วเปลี่ยนเป็น "ใช้ได้" ก่อนจึงเริ่มเขียน test
+---
+
+## 2026-10-07 12.00 คำสั่ง: /testcases AC-BKG-01 specs/001-booking/
+
+- โหมด: เขียน test
+- หน้าที่ตรวจ: AC-BKG-01, test-cases.md แถว TC-BKG-01-1 ถึง TC-BKG-01-3 สถานะ "ใช้ได้"
+- ผลลัพธ์: เขียนโค้ด test ใน backend/tests/test_AC_BKG_01.py
+  - TC-BKG-01-1: assert สำเร็จ
+  - TC-BKG-01-2: assert สำเร็จ
+  - TC-BKG-01-3: ยังไม่ตรวจเพราะรอ Q-03 โดยไม่มี assert
+- รัน test: cd backend && pytest -v
+- ผล: ผ่านทั้งหมด 7 test
+
+### ผลทดสอบจริง
+- test_AC_BKG_01: PASSED
+- test_TC_BKG_01_1_booking_success: PASSED
+- test_TC_BKG_01_2_last_seat_booking: PASSED
+- test_TC_BKG_01_3_unverified_user: PASSED (ไม่มี assert ตาม Q-03)
+- test_AC_BKG_05: PASSED
+- test_T01_tables_created: PASSED
+- test_T01_no_national_id: PASSED
+
+สรุป: โหมดเขียน test สำหรับ AC-BKG-01 สำเร็จ 3 แถวที่พร้อมตรวจได้ผ่าน และ 1 แถวที่รอ Q-03 ยังไม่มี assert ตามเงื่อนไข
